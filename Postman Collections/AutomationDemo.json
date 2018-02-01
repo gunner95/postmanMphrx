@@ -218,6 +218,7 @@
         {
           "listen": "prerequest",
           "script": {
+            "id": "15521a36-38ee-4386-86d4-d2c486bc270d",
             "type": "text/javascript",
             "exec": [
               "test",
@@ -230,10 +231,11 @@
         {
           "listen": "test",
           "script": {
+            "id": "c78c7dac-7063-4dcd-819a-18e3f715a7bb",
             "type": "text/javascript",
             "exec": [
               "",
-              "tests[\"Status code is 200\"] = responseCode.code === 700;",
+              "tests[\"Status code is 200\"] = responseCode.code === 900;",
               "",
               "var responseJson = JSON.parse(responseBody);",
               "",
