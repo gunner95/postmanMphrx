@@ -38,7 +38,7 @@
           "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
         },
         "url": "{{minerva_base_url}}/minerva/api/login",
-        "description": null
+        "description": ""
       },
       "response": []
     },
@@ -90,7 +90,7 @@
           "raw": "\n\n\n\n"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/getUserDetails",
-        "description": null
+        "description": ""
       },
       "response": []
     },
@@ -127,7 +127,7 @@
           "raw": ""
         },
         "url": "{{minerva_base_url}}/minerva/user/renderConfigList",
-        "description": null
+        "description": ""
       },
       "response": []
     },
@@ -179,7 +179,7 @@
           "raw": "\n\n\n\n"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/save",
-        "description": null
+        "description": ""
       },
       "response": []
     },
@@ -207,7 +207,7 @@
           "raw": ""
         },
         "url": "https://nhtesting.mphrx.com/minerva/api/login",
-        "description": null
+        "description": ""
       },
       "response": []
     },
@@ -233,7 +233,7 @@
             "type": "text/javascript",
             "exec": [
               "",
-              "tests[\"Status code is 200\"] = responseCode.code === 90120;",
+              "tests[\"Status code is 200\"] = responseCode.code === 700;",
               "",
               "var responseJson = JSON.parse(responseBody);",
               "",
@@ -271,7 +271,7 @@
           "raw": "\n\n\n\n"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/getUserDetails",
-        "description": null
+        "description": ""
       },
       "response": []
     }
