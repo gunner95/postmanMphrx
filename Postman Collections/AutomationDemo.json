@@ -1,13 +1,13 @@
 {
   "info": {
-    "name": "AutomationDemo",
-    "_postman_id": "9c7b309d-821f-622f-a3cd-da5a2c2f0e49",
+    "name": "AutomationDemo v2",
+    "_postman_id": "92eef5dc-be9f-fa01-5a96-7238826117c8",
     "description": "",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "_postman_id": "3d003648-da88-1b54-8be7-cb0174a1f3dc",
+      "_postman_id": "0e8adeb6-8b31-822c-82cd-67de09b4971c",
       "name": "Login API",
       "event": [
         {
@@ -15,7 +15,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 1000;",
+              "tests[\"Status code is 200\"] = responseCode.code === 100;",
               "",
               "tests[\"Body contains token\"] = responseBody.has(\"token\");",
               "",
@@ -38,12 +38,12 @@
           "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
         },
         "url": "{{minerva_base_url}}/minerva/api/login",
-        "description": ""
+        "description": null
       },
       "response": []
     },
     {
-      "_postman_id": "d25646c9-d97b-39ea-6858-17029fb4d61e",
+      "_postman_id": "10f0aaf3-3f13-9ca8-6e57-0418382ecdb5",
       "name": "Get User Details",
       "event": [
         {
@@ -90,12 +90,12 @@
           "raw": "\n\n\n\n"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/getUserDetails",
-        "description": ""
+        "description": null
       },
       "response": []
     },
     {
-      "_postman_id": "e23f4168-6916-da76-cdbd-dbaabaf715e1",
+      "_postman_id": "b09c5b49-432a-73db-7ebe-47d75ccfb553",
       "name": "Config List",
       "event": [
         {
@@ -127,12 +127,12 @@
           "raw": ""
         },
         "url": "{{minerva_base_url}}/minerva/user/renderConfigList",
-        "description": ""
+        "description": null
       },
       "response": []
     },
     {
-      "_postman_id": "46f10078-0a44-bfd7-2c70-9e0c3c8bfb80",
+      "_postman_id": "932be84c-4bb3-64b6-498e-b6203fd92bde",
       "name": "Create User",
       "event": [
         {
@@ -179,12 +179,12 @@
           "raw": "\n\n\n\n"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/save",
-        "description": ""
+        "description": null
       },
       "response": []
     },
     {
-      "_postman_id": "3340574a-6b72-de5d-2a51-3f833131c451",
+      "_postman_id": "6b705b32-30b7-de9c-09a0-365157fc8198",
       "name": "Search User",
       "event": [
         {
@@ -207,12 +207,12 @@
           "raw": ""
         },
         "url": "https://nhtesting.mphrx.com/minerva/api/login",
-        "description": ""
+        "description": null
       },
       "response": []
     },
     {
-      "_postman_id": "6a8c6629-4def-8ba6-407b-e596a7d8f9bd",
+      "_postman_id": "31402e2c-6da9-f633-037f-91cfe55def1a",
       "name": "Update User",
       "event": [
         {
@@ -233,7 +233,7 @@
             "type": "text/javascript",
             "exec": [
               "",
-              "tests[\"Status code is 200\"] = responseCode.code === 700;",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
               "",
               "var responseJson = JSON.parse(responseBody);",
               "",
@@ -271,7 +271,7 @@
           "raw": "\n\n\n\n"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/getUserDetails",
-        "description": ""
+        "description": null
       },
       "response": []
     }
