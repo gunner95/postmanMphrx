@@ -1,0 +1,279 @@
+{
+  "info": {
+    "name": "AutomationDemo",
+    "_postman_id": "9c7b309d-821f-622f-a3cd-da5a2c2f0e49",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "3d003648-da88-1b54-8be7-cb0174a1f3dc",
+      "name": "Login API",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "tests[\"Body contains token\"] = responseBody.has(\"token\");",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "postman.setEnvironmentVariable(\"minerva_token\", jsonData.token);",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
+        },
+        "url": "{{minerva_base_url}}/minerva/api/login",
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "d25646c9-d97b-39ea-6858-17029fb4d61e",
+      "name": "Get User Details",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "var responseJson = JSON.parse(responseBody);",
+              "",
+              "",
+              "tests[\"authorities length > 0\"] = responseJson.authorities.length > 0;",
+              "",
+              "tests[\"userGroups length > 0\"] = responseJson.userGroups.length > 0;",
+              "",
+              "tests[\"menuItems length > 0\"] = responseJson.menuItems.length > 0;",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          },
+          {
+            "key": "api-info",
+            "value": "{{api-info}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n\n\n\n"
+        },
+        "url": "{{minerva_base_url}}/minerva/moUser/getUserDetails",
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "e23f4168-6916-da76-cdbd-dbaabaf715e1",
+      "name": "Config List",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          },
+          {
+            "key": "api-info",
+            "value": "{{api-info}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "{{minerva_base_url}}/minerva/user/renderConfigList",
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "46f10078-0a44-bfd7-2c70-9e0c3c8bfb80",
+      "name": "Create User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "var responseJson = JSON.parse(responseBody);",
+              "",
+              "",
+              "tests[\"authorities length > 0\"] = responseJson.authorities.length > 0;",
+              "",
+              "tests[\"userGroups length > 0\"] = responseJson.userGroups.length > 0;",
+              "",
+              "tests[\"menuItems length > 0\"] = responseJson.menuItems.length > 0;",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          },
+          {
+            "key": "api-info",
+            "value": "{{api-info}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n\n\n\n"
+        },
+        "url": "{{minerva_base_url}}/minerva/moUser/save",
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "3340574a-6b72-de5d-2a51-3f833131c451",
+      "name": "Search User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "https://nhtesting.mphrx.com/minerva/api/login",
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "6a8c6629-4def-8ba6-407b-e596a7d8f9bd",
+      "name": "Update User",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "test",
+              "",
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "var responseJson = JSON.parse(responseBody);",
+              "",
+              "",
+              "tests[\"authorities length > 0\"] = responseJson.authorities.length > 0;",
+              "",
+              "tests[\"userGroups length > 0\"] = responseJson.userGroups.length > 0;",
+              "",
+              "tests[\"menuItems length > 0\"] = responseJson.menuItems.length > 0;",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          },
+          {
+            "key": "api-info",
+            "value": "{{api-info}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n\n\n\n"
+        },
+        "url": "{{minerva_base_url}}/minerva/moUser/getUserDetails",
+        "description": null
+      },
+      "response": []
+    }
+  ]
+}
