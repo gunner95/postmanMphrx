@@ -233,7 +233,7 @@
             "type": "text/javascript",
             "exec": [
               "",
-              "tests[\"Status code is 200\"] = responseCode.code === 90120;",
+              "tests[\"Status code is 200\"] = responseCode.code === 700;",
               "",
               "var responseJson = JSON.parse(responseBody);",
               "",
