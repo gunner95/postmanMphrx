@@ -176,6 +176,17 @@
     {
       "_postman_id": "6b23392b-d9a6-ea33-7762-37b5e19f762f",
       "name": "Logout User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+            ]
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [],
