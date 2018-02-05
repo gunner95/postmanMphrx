@@ -149,12 +149,25 @@
       ],
       "request": {
         "method": "POST",
-        "header": [],
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          },
+          {
+            "key": "api-info",
+            "value": "{{api-info}}"
+          }
+        ],
         "body": {
           "mode": "raw",
-          "raw": ""
+          "raw": "{\"searchString\":\"sys_admin\",\"_skip\":0,\"random\":\"659.0255687674851\",\"includeAnonymous\":true}"
         },
-        "url": "https://nhtesting.mphrx.com/minerva/api/login",
+        "url": "{{minerva_base_url}}/minerva/moUser/search/",
         "description": null
       },
       "response": []
