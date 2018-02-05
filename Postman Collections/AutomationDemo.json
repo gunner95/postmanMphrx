@@ -172,6 +172,18 @@
         "description": null
       },
       "response": []
+    },
+    {
+      "_postman_id": "c2ea87b0-369d-bd81-2e98-3ee0e8a4f68e",
+      "name": "Logout User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": "",
+        "description": null
+      },
+      "response": []
     }
   ]
 }
