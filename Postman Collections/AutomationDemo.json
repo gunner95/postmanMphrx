@@ -184,6 +184,21 @@
         "description": null
       },
       "response": []
+    },
+    {
+      "_postman_id": "6b23392b-d9a6-ea33-7762-37b5e19f762f",
+      "name": "Logout User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": "{{minerva_base_url}}/minerva/api/logout",
+        "description": null
+      },
+      "response": []
     }
   ]
 }
