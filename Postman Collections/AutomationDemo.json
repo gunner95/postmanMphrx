@@ -132,58 +132,6 @@
       "response": []
     },
     {
-      "_postman_id": "932be84c-4bb3-64b6-498e-b6203fd92bde",
-      "name": "Create User",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "",
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
-              "var responseJson = JSON.parse(responseBody);",
-              "",
-              "",
-              "tests[\"authorities length > 0\"] = responseJson.authorities.length > 0;",
-              "",
-              "tests[\"userGroups length > 0\"] = responseJson.userGroups.length > 0;",
-              "",
-              "tests[\"menuItems length > 0\"] = responseJson.menuItems.length > 0;",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "x-auth-token",
-            "value": "{{minerva_token}}"
-          },
-          {
-            "key": "api-info",
-            "value": "{{api-info}}"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "\n\n\n\n"
-        },
-        "url": "{{minerva_base_url}}/minerva/moUser/save",
-        "description": null
-      },
-      "response": []
-    },
-    {
       "_postman_id": "6b705b32-30b7-de9c-09a0-365157fc8198",
       "name": "Search User",
       "event": [
