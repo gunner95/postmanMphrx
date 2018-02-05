@@ -141,9 +141,10 @@
             "type": "text/javascript",
             "exec": [
               "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "if(responseBody){",
               "var responseJson = JSON.parse(responseBody);",
               "tests['User list size>0'] =  responseJson.resultList.length > 0;",
-              ""
+              "}"
             ]
           }
         }
