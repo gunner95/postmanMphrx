@@ -189,7 +189,12 @@
       ],
       "request": {
         "method": "POST",
-        "header": [],
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          }
+        ],
         "body": {
           "mode": "raw",
           "raw": "{}"
