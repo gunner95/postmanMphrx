@@ -233,7 +233,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "tests[\"Patient updated\"] = responseCode.code === 200",
+              "tests[\"User updated\"] = responseCode.code === 200",
               "",
               "",
               "",
