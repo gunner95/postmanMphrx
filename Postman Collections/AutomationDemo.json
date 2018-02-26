@@ -230,34 +230,12 @@
       "name": "Update User",
       "event": [
         {
-          "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "test",
-              "",
-              "",
-              ""
-            ]
-          }
-        },
-        {
           "listen": "test",
           "script": {
             "type": "text/javascript",
             "exec": [
               "",
               "tests[\"Status code is 200\"] = responseCode.code === 700;",
-              "",
-              "var responseJson = JSON.parse(responseBody);",
-              "",
-              "",
-              "tests[\"authorities length > 0\"] = responseJson.authorities.length > 0;",
-              "",
-              "tests[\"userGroups length > 0\"] = responseJson.userGroups.length > 0;",
-              "",
-              "tests[\"menuItems length > 0\"] = responseJson.menuItems.length > 0;",
-              "",
               "",
               "",
               "",
