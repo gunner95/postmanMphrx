@@ -253,7 +253,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\"userGroups\":[5],\"username\":\"test\",\"email\":\"Meena@test1.com\",\"settings\":{\"pushNotificationForDocRejection\":true,\"pushNotificationForMedicationReminder\":true,\"pushNotificationForMessage\":true,\"pushNotificationForDocDigitization\":true},\"enabled\":true,\"firstName\":\"honey\",\"lastName\":\"Shah\",\"phoneNo\":\"1122374455\",\"countryCode\":\"+91\",\"gender\":\"Female\",\"userType\":\"PATIENT\",\"dob\":\"1961-07-27T00:00:00.000Z\",\"id\":\"697\",\"activeResource\":{\"status\":\"ACTIVE\"},\"patientId\":400}"
+          "raw": "{\"userGroups\":[5],\"username\":\"test\",\"email\":\"Meena@test1.com\",\"settings\":{\"pushNotificationForMessage\":true,\"pushNotificationForMedicationReminder\":true,\"pushNotificationForDocDigitization\":true,\"pushNotificationForDocRejection\":true},\"enabled\":true,\"firstName\":\"honey\",\"lastName\":\"Shah\",\"phoneNo\":\"1122374455\",\"countryCode\":\"+91\",\"gender\":\"Female\",\"userType\":\"PATIENT\",\"dob\":\"1961-07-27T00:00:00.000Z\",\"id\":\"699\",\"activeResource\":{\"status\":\"ACTIVE\"},\"patientId\":400}"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/update",
         "description": ""
