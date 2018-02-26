@@ -259,6 +259,48 @@
         "description": ""
       },
       "response": []
+    },
+    {
+      "_postman_id": "96034237-f60d-0e5a-e40d-9bd705aa503f",
+      "name": "Search User copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "var responseJson = JSON.parse(responseBody);",
+              "tests['user found'] = (responseJson && responseJson.totalCount > 0);",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          },
+          {
+            "key": "api-info",
+            "value": "{{api-info}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"searchString\":\"meena test2\",\"_skip\":0,\"random\":\"471.7524840478724\",\"includeAnonymous\":true}"
+        },
+        "url": "{{minerva_base_url}}/minerva/moUser/search",
+        "description": null
+      },
+      "response": []
     }
   ]
 }
