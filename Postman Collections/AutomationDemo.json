@@ -362,7 +362,11 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "tests[\"User logged out\"] = responseCode.code === 200;"
+              "tests[\"User logged out\"] = responseCode.code === 200;",
+              "postman.clearGlobalVariable(\"minerva_user2\");",
+              "postman.clearGlobalVariable(\"minerva_user\");",
+              "postman.clearGlobalVariable(\"user_id\");",
+              ""
             ]
           }
         }
