@@ -150,6 +150,7 @@
               "tests['Username unique'] = (responseJson.msg !== \"USERNAME_NOT_UNIQUE\");",
               "if(responseJson.user){",
               "postman.setEnvironmentVariable(\"user_id\", responseJson.user.id);",
+              "postman.setEnvironmentVariable(\"minerva_user\", responseJson.user.username);",
               "}",
               ""
             ]
