@@ -352,6 +352,37 @@
         "description": null
       },
       "response": []
+    },
+    {
+      "_postman_id": "0652cfa6-869d-dbca-6bb6-430f7c9ae882",
+      "name": "Logout User copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": "{{minerva_base_url}}/minerva/api/logout",
+        "description": null
+      },
+      "response": []
     }
   ]
 }
