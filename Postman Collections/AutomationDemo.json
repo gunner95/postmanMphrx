@@ -148,8 +148,8 @@
               "tests[\"User Created Successfully\"] = responseCode.code === 200;",
               "var responseJson = JSON.parse(responseBody);",
               "tests['Username not unique'] = responseJson.msg === \"USERNAME_NOT_UNIQUE\";",
-              "if(responseJson.id){",
-              "postman.setEnvironmentVariable(\"user_id\", responseJson.id);",
+              "if(responseJson.user){",
+              "postman.setEnvironmentVariable(\"user_id\", responseJson.user.id);",
               "}",
               ""
             ]
