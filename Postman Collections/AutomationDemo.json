@@ -182,9 +182,9 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "tests['user found'] = responseBody.totalCount > 0;",
               "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
+              "var responseJson = JSON.parse(responseBody);",
+              "tests['user found'] = (responseBody && responseBody.totalCount > 0);",
               ""
             ]
           }
