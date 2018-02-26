@@ -271,7 +271,7 @@
     },
     {
       "_postman_id": "3340574a-6b72-de5d-2a51-3f833131c451",
-      "name": "Search User",
+      "name": "Search Updated User",
       "event": [
         {
           "listen": "test",
