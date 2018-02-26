@@ -149,8 +149,8 @@
               "var responseJson = JSON.parse(responseBody);",
               "tests['Username unique'] = (responseJson.msg !== \"USERNAME_NOT_UNIQUE\");",
               "if(responseJson.user){",
-              "postman.setEnvironmentVariable(\"user_id\", responseJson.user.id);",
-              "postman.setEnvironmentVariable(\"minerva_user\", responseJson.user.username);",
+              "postman.setGlobalVariable(\"user_id\", responseJson.user.id);",
+              "postman.setGlobalVariable(\"minerva_user\", responseJson.user.username);",
               "}",
               ""
             ]
