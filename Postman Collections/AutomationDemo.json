@@ -175,7 +175,7 @@
     },
     {
       "_postman_id": "96034237-f60d-0e5a-e40d-9bd705aa503f",
-      "name": "Search User copy",
+      "name": "Search User",
       "event": [
         {
           "listen": "test",
