@@ -141,13 +141,8 @@
             "type": "text/javascript",
             "exec": [
               "tests[\"User Created Successfully\"] = responseCode.code === 200;",
-              "tests['user exists'] = responseBody.msg === \"USERNAME_NOT_UNIQUE\"",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
+              "var responseJson = JSON.parse(responseBody);",
+              "tests['Username not unique'] = responseJson.msg === \"USERNAME_NOT_UNIQUE\"",
               ""
             ]
           }
