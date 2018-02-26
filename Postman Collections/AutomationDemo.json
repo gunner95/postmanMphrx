@@ -309,6 +309,47 @@
         "description": ""
       },
       "response": []
+    },
+    {
+      "_postman_id": "9a2eeb0b-db39-c6d9-26c9-8149a15a5d21",
+      "name": "Login API copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "tests[\"Body contains token\"] = responseBody.has(\"token\");",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "postman.setEnvironmentVariable(\"minerva_token\", jsonData.token);",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
+        },
+        "url": "{{minerva_base_url}}/minerva/api/login",
+        "description": null
+      },
+      "response": []
     }
   ]
 }
