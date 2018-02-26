@@ -325,9 +325,10 @@
               "tests[\"Body contains token\"] = responseBody.has(\"token\");",
               "",
               "var jsonData = JSON.parse(responseBody);",
-              "",
+              "if(jsonData){",
               "postman.setEnvironmentVariable(\"minerva_token\", jsonData.token);",
-              "",
+              "tests[\"Logged in using new user\"] = jsonData.id === user_id;",
+              "}",
               "",
               "",
               ""
