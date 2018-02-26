@@ -313,7 +313,7 @@
     },
     {
       "_postman_id": "9a2eeb0b-db39-c6d9-26c9-8149a15a5d21",
-      "name": "Login API copy",
+      "name": "Login Updated User",
       "event": [
         {
           "listen": "test",
