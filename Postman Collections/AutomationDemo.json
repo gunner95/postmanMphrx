@@ -312,37 +312,6 @@
       "response": []
     },
     {
-      "_postman_id": "0652cfa6-869d-dbca-6bb6-430f7c9ae882",
-      "name": "Logout User copy",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "x-auth-token",
-            "value": "{{minerva_token}}"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{}"
-        },
-        "url": "{{minerva_base_url}}/minerva/api/logout",
-        "description": null
-      },
-      "response": []
-    },
-    {
       "_postman_id": "9a2eeb0b-db39-c6d9-26c9-8149a15a5d21",
       "name": "Login API copy",
       "event": [
@@ -380,6 +349,37 @@
           "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
         },
         "url": "{{minerva_base_url}}/minerva/api/login",
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "0652cfa6-869d-dbca-6bb6-430f7c9ae882",
+      "name": "Logout User copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": "{{minerva_base_url}}/minerva/api/logout",
         "description": null
       },
       "response": []
