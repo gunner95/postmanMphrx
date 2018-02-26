@@ -355,7 +355,7 @@
     },
     {
       "_postman_id": "0652cfa6-869d-dbca-6bb6-430f7c9ae882",
-      "name": "Logout User copy",
+      "name": "Logout Updated User",
       "event": [
         {
           "listen": "test",
