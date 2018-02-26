@@ -362,7 +362,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+              "tests[\"User logged out\"] = responseCode.code === 200;"
             ]
           }
         }
