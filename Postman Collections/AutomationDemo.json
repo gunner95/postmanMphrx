@@ -150,7 +150,7 @@
               "tests['Username unique'] = (responseJson.msg !== \"USERNAME_NOT_UNIQUE\");",
               "if(responseJson.user){",
               "postman.setGlobalVariable(\"user_id\", responseJson.user.id);",
-              "postman.setGlobalVariable(\"minerva_user\", responseJson.user.username);",
+              "postman.setGlobalVariable(\"minerva_user2\", responseJson.user.username);",
               "}",
               ""
             ]
