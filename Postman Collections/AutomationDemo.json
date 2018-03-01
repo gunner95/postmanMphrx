@@ -444,10 +444,10 @@
         {
           "listen": "test",
           "script": {
-            "id": "e9dcf27f-defb-46a3-bc08-1989e337859d",
+            "id": "6465e162-6b21-48f5-b6f0-4b5b7e0ec6af",
             "type": "text/javascript",
             "exec": [
-              ""
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
             ]
           }
         }
