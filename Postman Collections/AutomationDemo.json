@@ -387,6 +387,40 @@
         "description": null
       },
       "response": []
+    },
+    {
+      "_postman_id": "acbb2445-6d2f-4c13-9d0b-30c75c1a24cc",
+      "name": "http://127.0.0.1:3000/dev_consus/userOTP/*?filter={\"oneTimePassword\":\"{{otp}}\"}",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://127.0.0.1:3000/dev_consus/userOTP/*?filter={\"oneTimePassword\":\"{{otp}}\"}",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "dev_consus",
+            "userOTP",
+            "*"
+          ],
+          "query": [
+            {
+              "key": "filter",
+              "value": "{\"oneTimePassword\":\"{{otp}}\"}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
     }
   ]
 }
