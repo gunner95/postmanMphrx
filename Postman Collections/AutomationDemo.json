@@ -396,7 +396,7 @@
         "header": [],
         "body": {},
         "url": {
-          "raw": "http://127.0.0.1:3000/dev_consus/userOTP/*?filter={\"oneTimePassword\":\"{{otp}}\"}",
+          "raw": "http://127.0.0.1:3000/dev_consus/user/*?filter={\"_id\":\"{{user_id}}\"}",
           "protocol": "http",
           "host": [
             "127",
@@ -407,13 +407,13 @@
           "port": "3000",
           "path": [
             "dev_consus",
-            "userOTP",
+            "user",
             "*"
           ],
           "query": [
             {
               "key": "filter",
-              "value": "{\"oneTimePassword\":\"{{otp}}\"}",
+              "value": "{\"_id\":\"{{user_id}}\"}",
               "equals": true
             }
           ]
