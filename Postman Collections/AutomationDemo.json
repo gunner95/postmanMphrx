@@ -391,6 +391,19 @@
     {
       "_postman_id": "acbb2445-6d2f-4c13-9d0b-30c75c1a24cc",
       "name": "http://127.0.0.1:3000/dev_consus/userOTP/*?filter={\"oneTimePassword\":\"{{otp}}\"}",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "3d669a64-f704-42fa-837f-552d0578eb3c",
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Delete Success\"] = jsonData.deleted == 1"
+            ]
+          }
+        }
+      ],
       "request": {
         "method": "DELETE",
         "header": [],
