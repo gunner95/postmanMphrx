@@ -393,11 +393,15 @@
         {
           "listen": "test",
           "script": {
-            "id": "3d669a64-f704-42fa-837f-552d0578eb3c",
+            "id": "0e04380f-f645-4618-b60c-d78fd6eccd03",
             "type": "text/javascript",
             "exec": [
               "var jsonData = JSON.parse(responseBody);",
-              "tests[\"Delete Success\"] = jsonData.deleted == 1"
+              "tests[\"Delete Success\"] = jsonData.deleted == 1",
+              "postman.clearGlobalVariable(\"minerva_user2\");",
+              "postman.clearGlobalVariable(\"minerva_user\");",
+              "postman.clearGlobalVariable(\"user_id\");",
+              ""
             ]
           }
         }
