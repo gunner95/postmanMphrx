@@ -390,7 +390,7 @@
     },
     {
       "_postman_id": "acbb2445-6d2f-4c13-9d0b-30c75c1a24cc",
-      "name": "http://127.0.0.1:3000/dev_consus/userOTP/*?filter={\"oneTimePassword\":\"{{otp}}\"}",
+      "name": "Delete User",
       "event": [
         {
           "listen": "test",
