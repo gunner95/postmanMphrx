@@ -391,7 +391,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"username\": \"{{minerva_user2}}\",\n    \"password\": \"test\"\n}"
+          "raw": "{\n    \"username\": \"{{minerva_user2}}\",\n    \"password\": \"test1\"\n}"
         },
         "url": "{{minerva_base_url}}/minerva/api/login",
         "description": null
