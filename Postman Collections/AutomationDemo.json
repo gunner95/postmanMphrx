@@ -564,7 +564,7 @@
     },
     {
       "_postman_id": "62e58f37-584e-4e5b-89d6-9259b89d2668",
-      "name": "Update User Next_id Copy",
+      "name": "Update Patient Next_id",
       "event": [
         {
           "listen": "test",
