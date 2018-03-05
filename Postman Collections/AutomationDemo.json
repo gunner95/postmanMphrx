@@ -262,7 +262,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\"searchString\":\"yoyo\",\"_skip\":0,\"random\":\"471.7524840478724\",\"includeAnonymous\":true}"
+          "raw": "{\"searchString\":\"pratyush\",\"_skip\":0,\"random\":\"471.7524840478724\",\"includeAnonymous\":true}"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/search",
         "description": null
