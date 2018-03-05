@@ -349,7 +349,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\"searchString\":\"honey\",\"_skip\":0,\"random\":\"471.7524840478724\",\"includeAnonymous\":true}"
+          "raw": "{\"searchString\":\"ptest\",\"_skip\":0,\"random\":\"471.7524840478724\",\"includeAnonymous\":true}"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/search",
         "description": ""
