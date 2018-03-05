@@ -433,7 +433,7 @@
     },
     {
       "_postman_id": "acbb2445-6d2f-4c13-9d0b-30c75c1a24cc",
-      "name": "Delete User",
+      "name": "Delete Patient",
       "event": [
         {
           "listen": "test",
