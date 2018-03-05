@@ -513,6 +513,57 @@
         "description": null
       },
       "response": []
+    },
+    {
+      "_postman_id": "8e81ff46-3ca7-4732-a248-6675abb11b1c",
+      "name": "Delete User Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "0e04380f-f645-4618-b60c-d78fd6eccd03",
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Delete Success\"] = jsonData.deleted == 1",
+              "postman.clearGlobalVariable(\"minerva_user2\");",
+              "postman.clearGlobalVariable(\"minerva_user\");",
+              "postman.clearGlobalVariable(\"user_id\");",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://127.0.0.1:3000/dev_consus/user/*?filter={\"_id\":{{user_id}}}",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "dev_consus",
+            "user",
+            "*"
+          ],
+          "query": [
+            {
+              "key": "filter",
+              "value": "{\"_id\":{{user_id}}}",
+              "equals": true
+            }
+          ]
+        },
+        "description": null
+      },
+      "response": []
     }
   ]
 }
