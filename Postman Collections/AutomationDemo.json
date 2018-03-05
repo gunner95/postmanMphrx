@@ -589,7 +589,7 @@
           "mode": "raw",
           "raw": "{\n\t\"$inc\":{\"next_id\":-1}\n}"
         },
-        "url": "http://127.0.0.1:3000/dev_consus/user.next_id/user",
+        "url": "http://127.0.0.1:3000/dev_consus/patient.next_id/patient",
         "description": null
       },
       "response": []
