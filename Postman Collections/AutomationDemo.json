@@ -307,7 +307,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\"userGroups\":[5],\"username\":\"test\",\"email\":\"pbansal@mphrx.com\",\"settings\":{\"pushNotificationForMessage\":true,\"pushNotificationForMedicationReminder\":true,\"pushNotificationForDocDigitization\":true,\"pushNotificationForDocRejection\":true},\"enabled\":true,\"firstName\":\"ptest\",\"lastName\":\"mphrx\",\"phoneNo\":\"9810052808\",\"countryCode\":\"+91\",\"gender\":\"Male\",\"userType\":\"PATIENT\",\"dob\":\"1992-04-08T00:00:00.000Z\",\"id\":\"{{user_id}}\",\"activeResource\":{\"status\":\"ACTIVE\"},\"patientId\":\"{{patient_id}}\"}"
+          "raw": "{\"userGroups\":[5],\"username\":\"test\",\"email\":\"pbansal@mphrx.com\",\"settings\":{\"pushNotificationForMessage\":true,\"pushNotificationForMedicationReminder\":true,\"pushNotificationForDocDigitization\":true,\"pushNotificationForDocRejection\":true},\"enabled\":true,\"firstName\":\"ptest\",\"lastName\":\"mphrx\",\"phoneNo\":\"9810052808\",\"countryCode\":\"+91\",\"gender\":\"Male\",\"userType\":\"PATIENT\",\"dob\":\"1992-04-08T00:00:00.000Z\",\"id\":{{user_id}},\"activeResource\":{\"status\":\"ACTIVE\"},\"patientId\":{{patient_id}}}"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/update",
         "description": ""
