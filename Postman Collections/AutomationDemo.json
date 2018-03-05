@@ -483,38 +483,6 @@
       "response": []
     },
     {
-      "_postman_id": "5571ddac-9326-4650-b69d-3e7520b9e235",
-      "name": "Update User Next_id",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "6465e162-6b21-48f5-b6f0-4b5b7e0ec6af",
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "PATCH",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"$inc\":{\"next_id\":-1}\n}"
-        },
-        "url": "http://127.0.0.1:3000/dev_consus/user.next_id/user",
-        "description": null
-      },
-      "response": []
-    },
-    {
       "_postman_id": "8e81ff46-3ca7-4732-a248-6675abb11b1c",
       "name": "Delete User Copy",
       "event": [
@@ -561,6 +529,38 @@
             }
           ]
         },
+        "description": null
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "5571ddac-9326-4650-b69d-3e7520b9e235",
+      "name": "Update User Next_id",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6465e162-6b21-48f5-b6f0-4b5b7e0ec6af",
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"$inc\":{\"next_id\":-1}\n}"
+        },
+        "url": "http://127.0.0.1:3000/dev_consus/user.next_id/user",
         "description": null
       },
       "response": []
