@@ -481,7 +481,7 @@
     },
     {
       "_postman_id": "8e81ff46-3ca7-4732-a248-6675abb11b1c",
-      "name": "Delete User Copy",
+      "name": "Delete User",
       "event": [
         {
           "listen": "test",
