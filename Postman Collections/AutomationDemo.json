@@ -220,7 +220,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\"userGroups\":[5],\"username\":\"test1\",\"email\":\"Meena@test1.com\",\"password\":\"test\",\"firstName\":\"yoyo\",\"lastName\":\"Shah\",\"phoneNo\":\"1122374455\",\"countryCode\":\"+91\",\"gender\":\"Female\",\"dob\":\"1961-07-27T00:00:00.000Z\",\"activeResource\":{\"status\":\"ACTIVE\"},\"enabled\":true,\"userType\":\"PATIENT\",\"adminCreatedPasswordNeverChanged\":true,\"signUpSource\":\"MINERVA\",\"patientId\":400}\n\n\n\n"
+          "raw": "{\"userGroups\":[5],\"username\":\"test\",\"email\":\"pbansal@mphrx.com\",\"password\":\"test1\",\"firstName\":\"Pratyush \",\"lastName\":\"\",\"phoneNo\":\"9810052808\",\"countryCode\":\"+91\",\"gender\":\"Male\",\"dob\":\"1992-04-08T00:00:00.000Z\",\"activeResource\":{\"status\":\"ACTIVE\"},\"enabled\":true,\"userType\":\"PATIENT\",\"adminCreatedPasswordNeverChanged\":true,\"signUpSource\":\"MINERVA\",\"patientId\":1059}"
         },
         "url": "{{minerva_base_url}}/minerva/moUser/save",
         "description": ""
