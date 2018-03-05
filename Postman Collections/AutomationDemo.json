@@ -564,6 +564,38 @@
         "description": null
       },
       "response": []
+    },
+    {
+      "_postman_id": "62e58f37-584e-4e5b-89d6-9259b89d2668",
+      "name": "Update User Next_id Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "6465e162-6b21-48f5-b6f0-4b5b7e0ec6af",
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"$inc\":{\"next_id\":-1}\n}"
+        },
+        "url": "http://127.0.0.1:3000/dev_consus/user.next_id/user",
+        "description": null
+      },
+      "response": []
     }
   ]
 }
