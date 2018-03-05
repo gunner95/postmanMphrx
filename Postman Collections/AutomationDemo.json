@@ -438,14 +438,11 @@
         {
           "listen": "test",
           "script": {
-            "id": "0e04380f-f645-4618-b60c-d78fd6eccd03",
+            "id": "badad9a8-d367-4542-882e-a3b2a56334fe",
             "type": "text/javascript",
             "exec": [
               "var jsonData = JSON.parse(responseBody);",
               "tests[\"Delete Success\"] = jsonData.deleted == 1",
-              "postman.clearGlobalVariable(\"minerva_user2\");",
-              "postman.clearGlobalVariable(\"minerva_user\");",
-              "postman.clearGlobalVariable(\"user_id\");",
               ""
             ]
           }
@@ -456,7 +453,7 @@
         "header": [],
         "body": {},
         "url": {
-          "raw": "http://127.0.0.1:3000/dev_consus/user/*?filter={\"_id\":{{user_id}}}",
+          "raw": "http://127.0.0.1:3000/dev_consus/patient/*?filter={\"_id\":{{patient_id}}}",
           "protocol": "http",
           "host": [
             "127",
@@ -467,13 +464,13 @@
           "port": "3000",
           "path": [
             "dev_consus",
-            "user",
+            "patient",
             "*"
           ],
           "query": [
             {
               "key": "filter",
-              "value": "{\"_id\":{{user_id}}}",
+              "value": "{\"_id\":{{patient_id}}}",
               "equals": true
             }
           ]
