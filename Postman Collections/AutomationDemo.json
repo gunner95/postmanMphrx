@@ -243,7 +243,8 @@
         "header": [
           {
             "key": "x-auth-token",
-            "value": "{{minerva_token}}"
+            "value": "{{minerva_token}}",
+            "description": "test"
           },
           {
             "key": "api-info",
