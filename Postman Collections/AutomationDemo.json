@@ -46,6 +46,46 @@
       "response": []
     },
     {
+      "_postman_id": "7d5472a5-3aae-4a31-9223-f51a9e8992bb",
+      "name": "Login API Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "tests[\"Body contains token\"] = responseBody.has(\"token\");",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "postman.setEnvironmentVariable(\"minerva_token\", jsonData.token);",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
+        },
+        "url": "{{minerva_base_url}}/minerva/api/login"
+      },
+      "response": []
+    },
+    {
       "_postman_id": "d25646c9-d97b-39ea-6858-17029fb4d61e",
       "name": "Get User Details",
       "event": [
@@ -577,46 +617,6 @@
           "raw": "{\n\t\"$inc\":{\"next_id\":-1}\n}"
         },
         "url": "http://127.0.0.1:3000/dev_consus/patient.next_id/patient"
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "7d5472a5-3aae-4a31-9223-f51a9e8992bb",
-      "name": "Login API Copy",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
-              "tests[\"Body contains token\"] = responseBody.has(\"token\");",
-              "",
-              "var jsonData = JSON.parse(responseBody);",
-              "",
-              "postman.setEnvironmentVariable(\"minerva_token\", jsonData.token);",
-              "",
-              "",
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
-        },
-        "url": "{{minerva_base_url}}/minerva/api/login"
       },
       "response": []
     }
