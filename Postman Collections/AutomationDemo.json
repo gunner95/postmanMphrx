@@ -2,6 +2,7 @@
   "info": {
     "_postman_id": "9c7b309d-821f-622f-a3cd-da5a2c2f0e49",
     "name": "AutomationDemo",
+    "description": "New User Module\n\nSteps:\n1. Login using sys_admin\n2. Get the sys_admin details\n3. Get Config List\n4. Create a new Patient\n5. Create a new User for that patient\n6. Search that new user\n7. Update the new created user\n8. Login using the user created\n9. Logout\n10. Delete the new patient\n11. Delete the new User\n12. Update user.nextId and patient.nextId",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
