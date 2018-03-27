@@ -42,7 +42,8 @@
           "mode": "raw",
           "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
         },
-        "url": "{{minerva_base_url}}/minerva/api/login"
+        "url": "{{minerva_base_url}}/minerva/api/login",
+        "description": "Params\n\nUsername: Username for login\n\nPassword: Password the account"
       },
       "response": []
     },
