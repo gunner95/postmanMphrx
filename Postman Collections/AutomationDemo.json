@@ -1,8 +1,7 @@
 {
   "info": {
-    "name": "AutomationDemo v2",
     "_postman_id": "92eef5dc-be9f-fa01-5a96-7238826117c8",
-    "description": "",
+    "name": "AutomationDemo v2",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -37,8 +36,7 @@
           "mode": "raw",
           "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
         },
-        "url": "{{minerva_base_url}}/minerva/api/login",
-        "description": null
+        "url": "{{minerva_base_url}}/minerva/api/login"
       },
       "response": []
     },
@@ -89,8 +87,7 @@
           "mode": "raw",
           "raw": "\n\n\n\n"
         },
-        "url": "{{minerva_base_url}}/minerva/moUser/getUserDetails",
-        "description": null
+        "url": "{{minerva_base_url}}/minerva/moUser/getUserDetails"
       },
       "response": []
     },
@@ -126,8 +123,7 @@
           "mode": "raw",
           "raw": ""
         },
-        "url": "{{minerva_base_url}}/minerva/user/renderConfigList",
-        "description": null
+        "url": "{{minerva_base_url}}/minerva/user/renderConfigList"
       },
       "response": []
     },
@@ -169,8 +165,7 @@
           "mode": "raw",
           "raw": "{\"searchString\":\"sys_admin\",\"_skip\":0,\"random\":\"659.0255687674851\",\"includeAnonymous\":true}"
         },
-        "url": "{{minerva_base_url}}/minerva/moUser/search/",
-        "description": null
+        "url": "{{minerva_base_url}}/minerva/moUser/search/"
       },
       "response": []
     },
@@ -200,8 +195,51 @@
           "mode": "raw",
           "raw": "{}"
         },
-        "url": "{{minerva_base_url}}/minerva/api/logout",
-        "description": null
+        "url": "{{minerva_base_url}}/minerva/api/logout"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "3d3fd70a-656e-406c-869c-a0e998386c27",
+      "name": "Create Patient Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "f3ab3506-8f19-47b8-bdbd-0f66a7f93116",
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Patient Created Successfully\"] = responseCode.code === 200;",
+              "var responseJson = JSON.parse(responseBody);",
+              "if(responseJson.patient){",
+              "postman.setGlobalVariable(\"patient_id\", responseJson.patient.id);",
+              "}",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "{{minerva_token}}"
+          },
+          {
+            "key": "api-info",
+            "value": "{{api-info}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"patientId\":\"\",\"firstName\":\"Pratyush\",\"middleName\":\"\",\"lastName\":\"\",\"dob\":\"1992-04-08T00:00:00.000Z\",\"gender\":\"M\",\"emailList\":[{\"countryCode\":null,\"primary\":\"true\",\"system\":\"email\",\"useCode\":\"work\",\"value\":\"\"}],\"phoneList\":[{\"countryCode\":\"+91\",\"primary\":\"true\",\"system\":\"phone\",\"useCode\":\"Home Phone\",\"value\":\"9810052808\"}]}"
+        },
+        "url": "{{minerva_base_url}}/minerva/MoPatient/savePatient"
       },
       "response": []
     }
