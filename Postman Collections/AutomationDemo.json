@@ -581,47 +581,6 @@
         "url": "http://127.0.0.1:3000/dev_consus/patient.next_id/patient"
       },
       "response": []
-    },
-    {
-      "_postman_id": "00f5ed0f-a9e5-4806-adf0-c965b83781bb",
-      "name": "Login API Copy",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
-              "tests[\"Body contains token\"] = responseBody.has(\"token\");",
-              "",
-              "var jsonData = JSON.parse(responseBody);",
-              "",
-              "postman.setEnvironmentVariable(\"minerva_token\", jsonData.token);",
-              "",
-              "",
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"username\": \"{{minerva_user}}\",\n    \"password\": \"{{minerva_user_password}}\"\n}"
-        },
-        "url": "{{minerva_base_url}}/minerva/api/login",
-        "description": "Basic Login API\nRequires following params\n\nUsername: Username for login\n\nPassword: Password the account"
-      },
-      "response": []
     }
   ]
 }
