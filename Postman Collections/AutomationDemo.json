@@ -198,50 +198,6 @@
         "url": "{{minerva_base_url}}/minerva/api/logout"
       },
       "response": []
-    },
-    {
-      "_postman_id": "3d3fd70a-656e-406c-869c-a0e998386c27",
-      "name": "Create Patient Mainline",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "f3ab3506-8f19-47b8-bdbd-0f66a7f93116",
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Patient Created Successfully\"] = responseCode.code === 200;",
-              "var responseJson = JSON.parse(responseBody);",
-              "if(responseJson.patient){",
-              "postman.setGlobalVariable(\"patient_id\", responseJson.patient.id);",
-              "}",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "x-auth-token",
-            "value": "{{minerva_token}}"
-          },
-          {
-            "key": "api-info",
-            "value": "{{api-info}}"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"firstName\": \"Pratyush\",\n  \"middleName\": \"Bansal\",\n  \"lastName\": \"Test\",\n  \"dob\": \"2016-07-04T00:00:00.000Z\",\n  \"gender\": \"M\",\n  \"address\": [\n    {\n      \"useCode\": \"Home\",\n      \"country\": \"India\",\n      \"state\": \"Delhi\",\n      \"city\": \"New Delhi\",\n      \"line1\": \"A-sddjs\",\n      \"line2\": \"sadsdas\",\n      \"zipcode\": \"110001\"\n    }\n  ],\n  \"contact\": [\n    {\n      \"relationship\": [\n        \"Mother\"\n      ],\n      \"firstName\": \"Tester\",\n      \"phoneValue\": \"8888888888\",\n      \"emailValue\": \"qwert@gmail.com\",\n      \"countryCode\": \"+91\"\n    },\n    {\n      \"firstName\": \"Tester2\",\n      \"relationship\": [\n        \"Father\"\n      ],\n      \"phoneValue\": \"7777777777\",\n      \"emailValue\": \"tyuio@gmaiil.com\",\n      \"countryCode\": \"+91\"\n    }\n  ],\n  \"identifier\": [\n    {\n      \"value\": \"5555\",\n      \"assigningAuthority\": \"Minerva\",\n      \"typeCode\": \"MR\"\n    }\n  ],\n  \"email\": [\n    {\n      \"value\": \"pbansal@mphrx.com\"\n    }\n  ],\n  \"phone\": [\n    {\n      \"countryCode\": \"+91\",\n      \"value\": \"9810052808\"\n    },\n    {\n      \"countryCode\": \"+91\",\n      \"value\": \"9999999999\"\n    }\n  ]\n}"
-        },
-        "url": "{{minerva_base_url}}/minerva/MoPatient/savePatient"
-      },
-      "response": []
     }
   ]
 }
