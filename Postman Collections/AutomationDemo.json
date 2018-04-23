@@ -201,7 +201,7 @@
     },
     {
       "_postman_id": "3d3fd70a-656e-406c-869c-a0e998386c27",
-      "name": "Create Patient Copy",
+      "name": "Create Patient Mainline",
       "event": [
         {
           "listen": "test",
