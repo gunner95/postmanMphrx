@@ -581,6 +581,47 @@
         "url": "http://127.0.0.1:3000/dev_consus/patient.next_id/patient"
       },
       "response": []
+    },
+    {
+      "_postman_id": "30022713-26fc-4260-8d60-b227658f0705",
+      "name": "Push hl7Message",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "postman.setGlobalVariable(\"time\", (new Date()).toISOString());",
+              "",
+              "tests[\"Successful POST request\"] = responseCode.code === 200 || responseCode.code === 201;",
+              "",
+              "tests[\"Status code name has string\"] = responseCode.name.has(\"OK\") || responseCode.name.has(\"Created\");",
+              "",
+              "var hl7MsgId = 1 + Number(postman.getGlobalVariable(\"HL7MsgId\"));",
+              "postman.setGlobalVariable(\"HL7MsgId\", hl7MsgId);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46Y2hhbmdlaXQ="
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"_id\": NumberLong({{HL7MsgId}}),\n  \"admittingDoctorAssigningAuthority\": \"APHP\",\n  \"attendingDoctorAssigningAuthority\": \"APHP\",\n  \"consultingDoctorAssigningAuthority\": \"APHP\",\n  \"consultingPhysicianFirstName\": \"KOS\",\n  \"consultingPhysicianId\": \"1234201887\",\n  \"consultingPhysicianLastName\": \"HIPPOCRATES\",\n  \"dateCreated\": ISODate(\"2018-02-21T08:49:13.933Z\"),\n  \"documentContentPresentation\": \"AP\",\n  \"documentFileName\": \"radio\",\n  \"documentStatus\": \"F\",\n  \"encounterId\": \"AHMD-0000000015_V000671302000023-AHMD\",\n  \"eventDate\": \"20180220143345\",\n  \"eventType\": \"T02\",\n  \"jobInstanceNumber\": 0,\n  \"lastUpdated\": ISODate(\"2018-02-21T08:49:16.062Z\"),\n  \"messageBlob\": \"MSH|^~&|ORBIS|APHP|MEDIWEB|TNN|20150724114012||MDM^T02^MDM_T02|CONTROLLERID1234|P|2.5||||||8859/1\\rEVN||20180220143345\\rPID|||901109201887^^^CNV||GOPI^KISHANLAL^^^Mr^^L~GOPIKISHANLAL^pat^^^Mr^^F||19980201|F|||110^Sec77^US^H^122001^^H~^^^^122001^1^||+91-9212121271|||M||712503355||||||||||^303||N||1\\rPV1||I||A||068|1234201887^HIPPOCRATES^KOS|9099^KEVORKIAN^JACK||01||||01|||||80110977^^^CNV|||||||||||||||||||||||\\rORC|RE|radio|||||||||||^^^087^^^^^^750100273&FINESS^SIRIUS\\rOBR|radio|CCVSDTGEWQWE|||||||||||||||||||||||F\\rTXA|4|RadiologyReport|AP|||20180221090714|||10982018^Sandhal^Amit^Kumar|||radio||||radio|AU|||||AXALX^^^^^^^^^^^^^^201507241140\\rOBX|1|ED|ssss|1|^TEXT^^TEXT^||||||F\\rNTE|1||Samplenotetext\",\n  \"originationDate\": ISODate(\"2018-02-21T14:07:14Z\"),\n  \"originatorFirstName\": \"Amit\",\n  \"originatorId\": \"10982018\",\n  \"originatorLastName\": \"Sandhal\",\n  \"originatorMiddleName\": \"Kumar\",\n  \"patientAccountNumber\": \"7125033\",\n  \"patientAccountNumberUseCode\": \"usual\",\n  \"patientAlternateIds\": [\n    {\n      \"useCode\": \"temp\"\n    }\n  ],\n  \"patientCity\": \"<PID.11.3>US</PID.11.3><PID.11.3/>\",\n  \"patientDLNTypeCode\": \"DL\",\n  \"patientDLNUseCode\": \"official\",\n  \"patientDob\": \"1998-02-01T00:00:00.000+0000\",\n  \"patientFirstName\": \"KISHANLAL\",\n  \"patientHomePh\": \"+91-9212121271\",\n  \"patientId\": \"CAHW-0000000070\",\n  \"patientLastName\": \"GOPI\",\n  \"patientMpiIdAssigningAuthority\": \"MPI\",\n  \"patientMpiIdAssigningFacility\": \"MPI\",\n  \"patientMpiIdTypeCode\": \"MPI\",\n  \"patientSex\": \"F\",\n  \"patientSsnIdAssigningAuthority\": \"SSN\",\n  \"patientSsnIdAssigningFacility\": \"SSN\",\n  \"patientSsnIdTypeCode\": \"SB\",\n  \"patientSsnIdUseCode\": \"official\",\n  \"patientState\": \"<PID.11.4>H</PID.11.4><PID.11.4/>\",\n  \"patientStrAdd1\": \"110\",\n  \"patientStrAdd2\": \"<PID.11.2>Sec 77</PID.11.2><PID.11.2/>\",\n  \"patientType\": \"Inpatient\",\n  \"patientZip\": \"<PID.11.5>122001</PID.11.5><PID.11.5>122001</PID.11.5>\",\n  \"performingLocationId\": \"TNN\",\n  \"performingLocationName\": \"TNN\",\n  \"performingOrganizationId\": \"TNN\",\n  \"performingOrganizationName\": \"TNN\",\n  \"processed\": \"PENDING\",\n  \"receivedDate\": ISODate(\"2015-07-24T15:40:12Z\"),\n  \"referringDoctorAssigningAuthority\": \"APHP\",\n  \"referringPhysicianAssigningAuthority\": \"APHP\",\n  \"referringPhysicianFirstName\": \"JACK\",\n  \"referringPhysicianId\": \"ANJPG5353J\",\n  \"referringPhysicianLastName\": \"KEVORKIAN\",\n  \"reportStatus\": \"F\",\n  \"sendingFacility\": \"APHP\",\n  \"version\": NumberLong(2),\n  \"patientMRNIds\": [\n    {\n      \"assigningAuthority\": \"CAHW\",\n      \"idValue\": \"CAHW-0000000070\",\n      \"useCode\": \"usual\"\n    }\n  ],\n  \"documentType\": \"PR\",\n  \"messageType\": \"MDM\",\n  \"patientVisitNumber\": \"AHMD-0000000015_V000671302000023-AHMD\",\n  \"interpreterId\": \"PBCPC58712\",\n  \"performerRole\": \"Administrative Staff\",\n  \"parentDocumentNumber\": \"85\",\n  \"documentNumber\": null,\n  \"placerOrderNumber\": null,\n  \"markToBeDeleted\": false\n}"
+        },
+        "url": "http://localhost:3000/dev_consus/hl7Message"
+      },
+      "response": []
     }
   ]
 }
